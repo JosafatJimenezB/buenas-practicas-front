@@ -1,0 +1,19 @@
+<div class="container">
+  <form class="form" #form="ngForm" (submit)="nuevoCliente(form)">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="cliente.nombre" required>
+
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido" class="form-control" [(ngModel)]="cliente.apellido" required>
+
+    <label for="correo">Correo</label>
+    <input type="text" id="correo" name="correo" class="form-control" [(ngModel)]="cliente.correo" required>
+
+    <label for="fechaRegistro">Fecha de registro</label>
+    <input type="text" id="fechaRegistro" name="fechaRegistro" class="form-control" [(ngModel)]="cliente.fechaRegistro"
+      required="campo requerido de fecha">
+
+    <button type="submit" class="btn btn-outline-dark">Enviar</button>
+  </form>
+</div>

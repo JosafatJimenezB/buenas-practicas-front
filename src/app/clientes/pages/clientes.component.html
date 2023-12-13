@@ -1,0 +1,33 @@
+<div class="container py-3">
+  <h1>Listado de clientes</h1>
+
+  <div class="table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Correo</th>
+          <th>Fecha de registro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>{{ cliente.idCliente }}</td>
+          <td>{{ cliente.nombre }}</td>
+          <td>{{ cliente.apellido }}</td>
+          <td>{{ cliente.correo }}</td>
+          <td>{{ cliente.fechaRegistro }}</td>
+          <td>
+            <button class="btn btn-primary">Editar</button>
+            <button class="btn btn-danger" (click)="eliminarCliente(cliente.idCliente)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-cliente-form></app-cliente-form>
+
+</div>
